@@ -198,6 +198,7 @@ inline void infl(char o)
 	case 'y':		{if(isdigit(numstr[0])==0) {again=1;} else year=atol(numstr); break;}
 	case 'd':		{if(isdigit(numstr[0])==0) {again=1;} else date=atol(numstr); break;}
 	case 'f':		{if(isdigit(numstr[0])==0) {strcpy(str,numstr);lim=6;strcase='d';chkstr();daynum=strno;}else{if (atol(numstr)<8){daynum=atol(numstr);ket=0;}else if(strno>7 || atol(numstr)>7){again=1;}}break;}
+	case 's':		{strcpy(str,numstr); break;}
 	}
 }
 /***************************************************************************************************************************************/
