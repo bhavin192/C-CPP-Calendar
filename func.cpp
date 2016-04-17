@@ -763,14 +763,14 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		}
 		if(keyr==VK_F10) //showing about info
 		{						 					
-		cal.gotoxy(0,12);
+		cal.gotoxy(0,13);
 		running=false;
 		}
 
 	}
 			//finding position of cursor from the buffer
 	coord = getxy();
-	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4; if(coord.Y==12) kvt=5;
+	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4; if(coord.Y==13) kvt=6;
 
 }
 /***************************************************************************************************************************************/
