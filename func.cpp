@@ -183,7 +183,7 @@ inline void setclr(int clrcode)
 inline void clr_mrks()
 {
 	int hy;
-	for(hy=4;hy<11;hy++)
+	for(hy=4;hy<13;hy++)
 	{
 	gotoxy(3,hy); putchar ('\0');
 	}
@@ -728,7 +728,7 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		ReadConsoleInput(hanInput, &irkInput, 1, &InputsReads);	//reading new input
 		keyr=irkInput.Event.KeyEvent.wVirtualKeyCode;
 		
-		if(keyr==VK_DOWN && coord.Y<=9) //Down key 
+		if(keyr==VK_DOWN && coord.Y<=11) //Down key 
 		{									
 		cal.clr_mrks(); cal.gotoxy(3,coord.Y+1);cal.setclr(12); putchar (mark); //moving marker
 		}
