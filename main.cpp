@@ -145,7 +145,7 @@ do
 	cout<<"\n\t2. Get calendar of any month\n";
 	cout<<"\n\t3. Get calendar of any year\n";
 	cout<<"\n\t4. Know dates in a month on which a day occurs\n";
-	cout<<"\n\t5. To-Do\n\n\t";
+	cout<<"\n\t5. Add new To-Do\n\n\t";
     cal.setclr(10);	
     cal.gotoxy(65,28); cout<<"ESC : EXIT";				//Provodomg button for exit	
     cal.gotoxy(5,28); cout<<"F10 : ABOUT";				//Provodomg button for about		
@@ -313,6 +313,8 @@ do
 			cal.gotoxy(35, 7);   	cout<<"TO-DO";
 			cal.gotoxy(28, 9);		cout<<"Enter the task\n";
 			cal.gotoxy(28,10);		cal.infl('s');
+			cal.gotoxy(28,11);		cal.addtodo();
+			cal.gotoxy(28,12);		cout<<"To-do added successfully!";
 		}
 /***************************************************************************************************************************************/
 	if (kvt==6)

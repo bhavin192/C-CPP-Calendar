@@ -78,6 +78,7 @@ void day2date ();		// function to dates from a day in a mmonth of an year.
 void printAll();		// function to print calendar of an year on console screen.
 void monthcal();		// function to print calendar of a month on console screen.
 void printcaltofile();	// function to print calendar of an year to a .txt file.
+void addtodo();			// function to add todo
 /***************************************************************************************************************************************/	
 inline void roadblock()					/**
 									Accessor Function to access the private member funtion digestMD5
@@ -979,5 +980,17 @@ inline void calendar::day2date ()							//Function to print dates of the given d
 			}
 		}
 }
-	
+void calendar::addtodo ()
+{
+	TCHAR spth[MAX_PATH];
+	SHGetFolderPath(NULL,CSIDL_LOCAL_APPDATA|CSIDL_FLAG_CREATE,NULL, 0,spth); /*function to find local applaction directory*/					
+	char todofile[100] = "Calendar\\";
+	strcat(todofile, usrn);
+	strcat(todofile, "-todo.cdb");
+	PathAppend(spth, TEXT(todofile));	//function to edit stored path
+	fstream fin; 
+	fin.open(spth, ios::out | ios::app);
+	fin<<str<<"\n";
+	fin.close();
+}	
 /***************************************************************************************************************************************/
