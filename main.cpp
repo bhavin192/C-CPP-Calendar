@@ -144,7 +144,8 @@ do
 	cout<<"\t1. Know day of any date\n";					//Options of the program
 	cout<<"\n\t2. Get calendar of any month\n";
 	cout<<"\n\t3. Get calendar of any year\n";
-	cout<<"\n\t4. Know dates in a month on which a day occurs\n\n\t";
+	cout<<"\n\t4. Know dates in a month on which a day occurs\n";
+	cout<<"\n\t5. To-Do\n\n\t";
     cal.setclr(10);	
     cal.gotoxy(65,28); cout<<"ESC : EXIT";				//Provodomg button for exit	
     cal.gotoxy(5,28); cout<<"F10 : ABOUT";				//Provodomg button for about		
