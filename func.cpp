@@ -753,6 +753,10 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		{		 					
 		cal.clr_mrks(); cal.gotoxy(3,10); cal.setclr(12); putchar (mark);		//moving marker		
 		}
+		if(keyr==0x35 || keyr==0x65) //5 key
+		{		 					
+		cal.clr_mrks(); cal.gotoxy(3,12); cal.setclr(12); putchar (mark);		//moving marker		
+		}		
 		if(keyr==VK_RETURN)	//ending loop on return(enter)
 		{		 					
 		running=false;											//assigning false value to bool running to end the loop
@@ -770,7 +774,7 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 	}
 			//finding position of cursor from the buffer
 	coord = getxy();
-	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4; if(coord.Y==13) kvt=6;
+	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4;if(coord.Y==12) kvt=5;if(coord.Y==13) kvt=6;
 
 }
 /***************************************************************************************************************************************/
