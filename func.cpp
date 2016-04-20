@@ -19,7 +19,7 @@ int  a, i = 0, j, m, q, s, u, w, x, y, z, ri, bt, kl, date=0,mon=0, year =0, day
 	 month		[12] = {6, 2, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 },  
 	 daysInMonth[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 	
-char uchk[25],pchk[25],bul=16,ch1='y',day[10],usrn[25],pass[25],pchoice,bi,numstr[15],str[15],strcase,name[25],fl[3],o,
+char uchk[25],pchk[25],bul=16,ch1='y',day[10],usrn[25],pass[25],pchoice,bi,numstr[15],str[15],strcase,name[25],fl[3],o,strToDo[500],
 	 week	[ 7][10] = {"Sunday", "Monday","Tuesday", "Wednesday","Thursday","Friday","Saturday"},
 	 months [12][10] = {"January","February","March","April","May","June","July","August","September","October","November","December"};
 
@@ -79,6 +79,7 @@ void printAll();		// function to print calendar of an year on console screen.
 void monthcal();		// function to print calendar of a month on console screen.
 void printcaltofile();	// function to print calendar of an year to a .txt file.
 void addtodo();			// function to add todo
+void viewtodo()			// function to view todo 
 /***************************************************************************************************************************************/	
 inline void roadblock()					/**
 									Accessor Function to access the private member funtion digestMD5
@@ -199,7 +200,7 @@ inline void infl(char o)
 	case 'y':		{if(isdigit(numstr[0])==0) {again=1;} else year=atol(numstr); break;}
 	case 'd':		{if(isdigit(numstr[0])==0) {again=1;} else date=atol(numstr); break;}
 	case 'f':		{if(isdigit(numstr[0])==0) {strcpy(str,numstr);lim=6;strcase='d';chkstr();daynum=strno;}else{if (atol(numstr)<8){daynum=atol(numstr);ket=0;}else if(strno>7 || atol(numstr)>7){again=1;}}break;}
-	case 's':		{strcpy(str,numstr); break;}
+	//case 's':		{strcpy(strToDo,numstr); break;}
 	}
 }
 /***************************************************************************************************************************************/
@@ -990,7 +991,12 @@ void calendar::addtodo ()
 	PathAppend(spth, TEXT(todofile));	//function to edit stored path
 	fstream fin; 
 	fin.open(spth, ios::out | ios::app);
-	fin<<str<<"\n";
+	fin<<strToDo<<"\n";
 	fin.close();
 }	
+
+void calendar::viewtodo()
+{
+	
+}
 /***************************************************************************************************************************************/

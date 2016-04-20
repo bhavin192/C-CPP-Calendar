@@ -312,7 +312,7 @@ do
 			cal.setclr(15);	
 			cal.gotoxy(35, 7);   	cout<<"TO-DO";
 			cal.gotoxy(28, 9);		cout<<"Enter the task\n";
-			cal.gotoxy(28,10);		cal.infl('s');
+			cal.gotoxy(28,10);		cin.getline(strToDo, sizeof(strToDo));cin.ignore(10000, '\n');//cal.infl('s');
 			cal.gotoxy(28,11);		cal.addtodo();
 			cal.gotoxy(28,12);		cout<<"To-do added successfully!";
 		}
