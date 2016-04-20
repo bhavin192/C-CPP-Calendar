@@ -79,7 +79,7 @@ void printAll();		// function to print calendar of an year on console screen.
 void monthcal();		// function to print calendar of a month on console screen.
 void printcaltofile();	// function to print calendar of an year to a .txt file.
 void addtodo();			// function to add todo
-void viewtodo()			// function to view todo 
+void viewtodo();			// function to view todo 
 /***************************************************************************************************************************************/	
 inline void roadblock()					/**
 									Accessor Function to access the private member funtion digestMD5
