@@ -185,7 +185,7 @@ inline void setclr(int clrcode)
 inline void clr_mrks()
 {
 	int hy;
-	for(hy=4;hy<13;hy++)
+	for(hy=4;hy<15;hy++)
 	{
 	gotoxy(3,hy); putchar ('\0');
 	}
