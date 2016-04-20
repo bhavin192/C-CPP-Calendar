@@ -114,26 +114,26 @@ do
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*setting up options menu*/
 	cal.setclr(7);	
-	cal.gotoxy( 0,15); 	cout<<"CREDITS\n";
+	cal.gotoxy( 0,17); 	cout<<"CREDITS\n";
 	cal.setclr(8);	
-	cal.gotoxy( 5,17); 	cout<<"           88           88                                             \n";
-	cal.gotoxy( 5,18); 	cout<<"           88           88                                             \n";
-	cal.gotoxy( 5,19);	cout<<"           88                                                          \n";
-	cal.gotoxy( 5,20); 	cout<<",adPPYba,  88,dPPYba,   88  8b       d8  ,adPPYYba,  8 ,dPYba,,adPYba, \n";
-	cal.gotoxy( 5,21); 	cout<<"SSS    sa  88P'     8a  88  `8b     d8'  aa     `Y8  88P'    88     8as\n";
-	cal.gotoxy( 5,22); 	cout<<"   S8ba    88       88  88   `8b   d8'   ,adPPPPP88  88      88      88\n";
-	cal.gotoxy( 5,23); 	cout<<"aa    DSD  88       88  88    `8b,d8'    88,    ,88  88      88      88\n";
-	cal.gotoxy( 5,24); 	cout<<"SaYbbdPa'  88       88  88      s8s      `s8bbdPsY8  88      88      88\n";
+	cal.gotoxy( 5,19); 	cout<<"           88           88                                             \n";
+	cal.gotoxy( 5,20); 	cout<<"           88           88                                             \n";
+	cal.gotoxy( 5,21);	cout<<"           88                                                          \n";
+	cal.gotoxy( 5,22); 	cout<<",adPPYba,  88,dPPYba,   88  8b       d8  ,adPPYYba,  8 ,dPYba,,adPYba, \n";
+	cal.gotoxy( 5,23); 	cout<<"SSS    sa  88P'     8a  88  `8b     d8'  aa     `Y8  88P'    88     8as\n";
+	cal.gotoxy( 5,24); 	cout<<"   S8ba    88       88  88   `8b   d8'   ,adPPPPP88  88      88      88\n";
+	cal.gotoxy( 5,25); 	cout<<"aa    DSD  88       88  88    `8b,d8'    88,    ,88  88      88      88\n";
+	cal.gotoxy( 5,26); 	cout<<"SaYbbdPa'  88       88  88      s8s      `s8bbdPsY8  88      88      88\n";
 	cal.gotoxy( 0, 0);
 /***************************************************************************************************************************************/
 	
 
 	cal.setclr(12);	
-	cal.gotoxy( 0,13);		cout<<"________________________________________________________________________________";
+	cal.gotoxy( 0,15);		cout<<"________________________________________________________________________________";
 	cal.gotoxy( 0, 0);		cout<<"________________________________________________________________________________";	//welcome
-	cal.gotoxy( 0,26);		cout<<"________________________________________________________________________________";
+	cal.gotoxy( 0,28);		cout<<"________________________________________________________________________________";
 	cal.setclr(15);	
-	cal.gotoxy(73-strlen(usrn)-4,13);		cout<<"Welcome "<<usrn;
+	cal.gotoxy(73-strlen(usrn)-4,15);		cout<<"Welcome "<<usrn;
 	cal.gotoxy(28, 0);		cout<<"Welcome to the Calendar";	
 	cal.gotoxy(70, 0);		cout<<"VER "<< ver;
 	cout<<"\n\n";
