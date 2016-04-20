@@ -731,7 +731,7 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		ReadConsoleInput(hanInput, &irkInput, 1, &InputsReads);	//reading new input
 		keyr=irkInput.Event.KeyEvent.wVirtualKeyCode;
 		
-		if(keyr==VK_DOWN && coord.Y<=11) //Down key 
+		if(keyr==VK_DOWN && coord.Y<=13) //Down key 
 		{									
 		cal.clr_mrks(); cal.gotoxy(3,coord.Y+1);cal.setclr(12); putchar (mark); //moving marker
 		}
@@ -759,6 +759,10 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		if(keyr==0x35 || keyr==0x65) //5 key
 		{		 					
 		cal.clr_mrks(); cal.gotoxy(3,12); cal.setclr(12); putchar (mark);		//moving marker		
+		}
+		if(keyr==0x36 || keyr==0x66) //6 key
+		{		 					
+		cal.clr_mrks(); cal.gotoxy(3,14); cal.setclr(12); putchar (mark);		//moving marker		
 		}		
 		if(keyr==VK_RETURN)	//ending loop on return(enter)
 		{		 					
@@ -770,14 +774,14 @@ void calendar::calmenu()			//function to operate main menu to the calendar app
 		}
 		if(keyr==VK_F10) //showing about info
 		{						 					
-		cal.gotoxy(0,13);
+		cal.gotoxy(0,15);
 		running=false;
 		}
 
 	}
 			//finding position of cursor from the buffer
 	coord = getxy();
-	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4;if(coord.Y==12) kvt=5;if(coord.Y==13) kvt=6;
+	if(coord.Y==4) kvt=1;if(coord.Y==6) kvt=2;if(coord.Y==8) kvt=3;if(coord.Y==10) kvt=4;if(coord.Y==12) kvt=5;if(coord.Y==14) kvt=6;if(coord.Y==15) kvt=7;
 
 }
 /***************************************************************************************************************************************/
