@@ -993,14 +993,30 @@ void calendar::addtodo ()
 	strcat(todofile, usrn);
 	strcat(todofile, "-todo.cdb");
 	PathAppend(spth, TEXT(todofile));	//function to edit stored path
-	fstream fin; 
-	fin.open(spth, ios::out | ios::app);
-	fin<<strToDo<<"\n";
-	fin.close();
+	fstream fout; 
+	fout.open(spth, ios::out | ios::app);
+	fout<<strToDo<<"\n";
+	fout.close();
 }	
 
 void calendar::viewtodo()
 {
-	
+	TCHAR spth[MAX_PATH];
+	SHGetFolderPath(NULL,CSIDL_LOCAL_APPDATA|CSIDL_FLAG_CREATE,NULL, 0,spth); /*function to find local applaction directory*/					
+	char todofile[100] = "Calendar\\";
+	strcat(todofile, usrn);
+	strcat(todofile, "-todo.cdb");
+	PathAppend(spth, TEXT(todofile));	//function to edit stored path
+	fstream fin; 
+	fin.open(spth, ios::in);
+	/*if(fin.fail()){
+		cout<<"No To-Dos exist!!\n";
+	}*/
+	while(! fin.eof())
+	{
+		fin.getline(strToDo, sizeof(strToDo));
+		cout<<strToDo<<"\n";
+	}
+	fin.close();	
 }
 /***************************************************************************************************************************************/
