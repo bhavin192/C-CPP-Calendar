@@ -211,7 +211,7 @@ inline void showinfo()
 		gotoxy(35,1);	cout<<"Calendar About\n\n\n";
 		setclr(10);
 		cout<<"\t<CALENDAR-Tool To Perform Calendar Related Functions>\n\tVersion - "<<ver.c_str()<<"\n\tCopyright (C) <2011-13> under GNU Affero General Public License\n\n\t";
-		cout<<"compiled using "; setclr(15); cout<<"GCC 4.6.1\n\n\t"; setclr(10);
+		cout<<"compiled using "; setclr(15); cout<<"GCC 4.9.2\n\n\t"; setclr(10);
 		cout<<"This Calendar app has been created by "; setclr(15);cout<<"Shivam Mathur"; setclr(10);cout<<"\n\t you can reach him here\n\n\t";
 		cout<<"Email \t\t : \t "; setclr(15); cout<<"shivam_jpr@hotmail.com\n\n\t";setclr(10);
 		cout<<"Facebook \t : \t"; setclr(15); cout<<" https://facebook.com/SHIVAMROCKZ\n\n\t";setclr(10);
