@@ -23,7 +23,7 @@ char uchk[25],pchk[25],bul=16,ch1='y',day[10],usrn[25],pass[25],pchoice,bi,numst
 	 week	[ 7][10] = {"Sunday", "Monday","Tuesday", "Wednesday","Thursday","Friday","Saturday"},
 	 months [12][10] = {"January","February","March","April","May","June","July","August","September","October","November","December"};
 
-std::string ver = "4.1";
+std::string ver = "4.2";
 
 TCHAR spth[MAX_PATH]; //to store path
 
@@ -1007,11 +1007,8 @@ void calendar::viewtodo()
 	strcat(todofile, usrn);
 	strcat(todofile, "-todo.cdb");
 	PathAppend(spth, TEXT(todofile));	//function to edit stored path
-	fstream fin; 
+	fstream fin;//(spth, ios::in); 
 	fin.open(spth, ios::in);
-	/*if(fin.fail()){
-		cout<<"No To-Dos exist!!\n";
-	}*/
 	while(! fin.eof())
 	{
 		fin.getline(strToDo, sizeof(strToDo));

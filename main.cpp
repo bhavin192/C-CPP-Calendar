@@ -307,13 +307,14 @@ do
 	if (kvt==5)				//todo section
 		{
 			cal.docls();
-			cal.setclr(2);	
+			cal.setclr(2);
+			cal.docls();	
 			cal.gotoxy(28, 7);   	cout<<"________________________";
 			cal.gotoxy(28,18);   	cout<<"________________________\n";
 			cal.setclr(15);	
 			cal.gotoxy(35, 7);   	cout<<"Add TO-DO";
 			cal.gotoxy(28, 9);		cout<<"Enter the task\n";
-			cal.gotoxy(28,10);		cin.getline(strToDo, sizeof(strToDo));cin.ignore(10000, '\n');//cal.infl('s');
+			cal.gotoxy(28,10);		cin.getline(strToDo, sizeof(strToDo)); cin.ignore(10000, '\n');//cal.infl('s');
 			cal.gotoxy(28,11);		cal.addtodo();
 			cal.gotoxy(28,12);		cout<<"To-do added successfully!";
 		}
@@ -321,12 +322,13 @@ do
 	if (kvt==6)				//todo section : view
 		{
 			cal.docls();
-			cal.setclr(2);	
-			cal.gotoxy( 0,15);		cout<<"________________________________________________________________________________";
-			cal.gotoxy( 0,27);		cout<<"________________________________________________________________________________";
+			cal.setclr(2);
+			cal.gotoxy( 0, 0);	
+			cal.gotoxy( 0,2);		cout<<"________________________________________________________________________________";
 			cal.setclr(15);	
-			cal.gotoxy(35, 15);   	cout<<"TO-DO";
-			cal.gotoxy(28,18);		cal.viewtodo();
+			cal.gotoxy(35, 2);   	cout<<"TO-DO";
+			cal.gotoxy(28,4);		cal.viewtodo();
+			cal.setclr(2);			cout<<"________________________________________________________________________________";
 			cal.GetCh();
 			
 		}
